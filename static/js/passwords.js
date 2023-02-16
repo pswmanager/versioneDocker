@@ -40,7 +40,7 @@ function reload(){
     hide_no_psw();
     showloader();
 
-    request('GET', "http://172.26.0.3:5000/passwords?user_id=" + sessionStorage.id, (json) =>{
+    request('GET', "http://172.17.2.22:5000/passwords?user_id=" + sessionStorage.id, (json) =>{
         var data = JSON.parse(json)
         hideloader();
         if(data.length == 0) {
@@ -54,7 +54,7 @@ function reload(){
 }
 
 function remove_password(id){
-    fetch("http://172.26.0.3:5000/passwords?id=" + id, {
+    fetch("http://172.17.2.22:5000/passwords?id=" + id, {
         method:'DELETE',
     })
     .then(res => {
@@ -71,7 +71,7 @@ function remove_password(id){
 }
 
 function update_password(id){
-    fetch("http://172.26.0.3:5000/passwords", {
+    fetch("172.17.2.22:5000/passwords", {
         method:'PUT',
         headers: {
             'Content-Type': 'application/json'

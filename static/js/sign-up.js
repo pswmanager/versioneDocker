@@ -7,7 +7,7 @@ function creaUtente(e) {
 
     var email = document.getElementById("sigemail").value;
 
-    request('POST', "http://172.26.0.3:5000/users", (json) => {
+    request('POST', "http://172.17.2.22:5000/users", (json) => {
         var data = JSON.parse(json);
         console.log(data);
         if(data.username === undefined) {
