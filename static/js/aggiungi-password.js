@@ -15,7 +15,7 @@ function aggiungiPassword(e){
 
     var platform = document.getElementById("platform").value;
 
-    fetch("http://api:5000/passwords", {
+    fetch("http://pswmanager:5000/passwords", {
         method : 'POST',
         headers: {
             'Content-Type': 'appliation/json'

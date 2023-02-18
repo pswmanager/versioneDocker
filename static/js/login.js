@@ -5,7 +5,7 @@ function accesso(e){
 
     password = document.getElementById('logpass').value;
 
-    request('GET', 'http://api:5000/users?username=' + username + '&password=' + password, (json) => {
+    request('GET', 'http://pswmanager:5000/users?username=' + username + '&password=' + password, (json) => {
         var data = JSON.parse(json);
         console.log(data)
         if(data.id == undefined){

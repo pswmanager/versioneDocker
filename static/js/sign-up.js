@@ -7,7 +7,7 @@ function creaUtente(e) {
 
     var email = document.getElementById("sigemail").value;
 
-    request('POST', "http://api:5000/users", (json) => {
+    request('POST', "http://pswmanager:5000/users", (json) => {
         var data = JSON.parse(json);
         console.log(data);
         if(data.username === undefined) {

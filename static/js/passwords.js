@@ -40,7 +40,7 @@ function reload(){
     hide_no_psw();
     showloader();
 
-    request('GET', "http://api:5000/passwords?user_id=" + sessionStorage.id, (json) =>{
+    request('GET', "http://pswmanager:5000/passwords?user_id=" + sessionStorage.id, (json) =>{
         var data = JSON.parse(json)
         hideloader();
         if(data.length == 0) {
@@ -54,7 +54,7 @@ function reload(){
 }
 
 function remove_password(id){
-    fetch("http://api:5000/passwords?id=" + id, {
+    fetch("http://pswmanager:5000/passwords?id=" + id, {
         method:'DELETE',
     })
     .then(res => {
@@ -71,7 +71,7 @@ function remove_password(id){
 }
 
 function update_password(id){
-    fetch("http://api:5000/passwords", {
+    fetch("http://pswmanager:5000/passwords", {
         method:'PUT',
         headers: {
             'Content-Type': 'application/json'
