@@ -30,7 +30,7 @@ function show_no_psw(){
 function pswVisibility(id){
     var visible = document.getElementById('input-' + id).type == 'password' ? false : true;
     document.getElementById('input-' + id).type = visible ? 'password' : 'text';
-    document.getElementById('eye-' + id).src = visible ? '/images/eye.svg' : '/images/eye-slash.svg'
+    document.getElementById('eye-' + id).src = visible ? '/static/images/eye.svg' : '/static/images/eye-slash.svg'
 }
 
 function reload(){
