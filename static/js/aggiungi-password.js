@@ -15,7 +15,7 @@ function aggiungiPassword(e){
 
     var platform = document.getElementById("platform").value;
 
-    fetch("http://172.17.2.22:5000/passwords", {
+    fetch("http://172.17.3.36:5000/passwords", {
         method : 'POST',
         headers: {
             'Content-Type': 'appliation/json'
